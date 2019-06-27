@@ -1,0 +1,7 @@
+#paypal_example.services.yml
+services:
+  paypal_example.paypal_listener:
+    class: Drupal\paypal_example\PaypalListener
+    arguments: []
+    tags:
+      - { name: event_subscriber }

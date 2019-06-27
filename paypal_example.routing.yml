@@ -1,0 +1,9 @@
+
+paypal_example.paypal_example:
+  path: '/paypal_example/form'
+  defaults:
+    _form: '\Drupal\paypal_example\Form\PaypalExample'
+    _title: 'PaypalExample'
+  requirements:
+    _permission: 'access content'
+

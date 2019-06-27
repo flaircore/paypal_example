@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains paypal_example.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function paypal_example_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the paypal_example module.
+    case 'help.page.paypal_example':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Contains example code on how to intergrate paypal payment with drupal 8') . '</p>';
+      return $output;
+
+    default:
+  }
+}
