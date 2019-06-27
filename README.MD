@@ -1,4 +1,5 @@
 #Paypal example for drupal
+
 Contains code example for a drupal form that collects payments via paypal
 
 Clone this repo in your modules folder and enable the module.
