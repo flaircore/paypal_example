@@ -12,7 +12,7 @@ go to `https://developer.paypal.com/developer/applications/`
 
 login and create your app and test accounts with some virtual $$
 
-copy your client id and crient secret in 
+copy your client id and client secret in 
 
 \Drupal\paypal_examplePaypalListener.php; lines 53, 54 AND
 \Drupal\paypal_example\FormPaypalExample.php; lines 87, 88
