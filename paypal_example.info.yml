@@ -1,5 +1,12 @@
-name: 'Paypal Example'
+# paypal_example.info.yml
+
+name: 'Paypal example'
 type: module
-description: 'Contains example code on how to intergrate paypal payment with drupal 8'
-core: 8.x
-package: 'Example'
+description: 'Paypal payment example for Drupal'
+package: 'Payment'
+
+core_version_requirement: ^8.8.0 || ^9 || ^10
+
+configure: paypal_example.paypal_settings_form
+
+# End of file.

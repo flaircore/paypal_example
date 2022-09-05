@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Contains paypal_example.module.
@@ -16,9 +15,24 @@ function paypal_example_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.paypal_example':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Contains example code on how to intergrate paypal payment with drupal 8') . '</p>';
+      $output .= '<p>' . t('Paypal example checkout') . '</p>';
       return $output;
 
     default:
   }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function paypal_example_theme() {
+  return [
+    'paypal_example' => [
+      'render element' => 'children',
+      'template' => 'paypal-example',
+      'variables' => [
+        'data' => NULL,
+      ]
+    ]
+  ];
 }
