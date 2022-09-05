@@ -1,0 +1,27 @@
+#paypal_example.libraries.yml
+
+# https://github.com/paypal/paypal-js#legacy-browser-support
+paypal_cdn:
+  version: VERSION
+  header: true
+  js:
+    //unpkg.com/@paypal/paypal-js@5.1.1/dist/iife/paypal-js.min.js: {
+      type: external,
+      minified: true,
+      attributes: { }
+      #attributes: { defer: true, async: true}
+      # window.paypalLoadScript is not a function error, see
+      # https://github.com/paypal/paypal-js; should be managed
+      # via npm as setting attributes to defer and async
+      # causes the error above sometimes.
+    }
+
+paypal:
+  js:
+    js/paypal_example.js: {attributes: { defer: true, async: true}}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - paypal_example/paypal_cdn
+
+# End of file.

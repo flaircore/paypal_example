@@ -1,9 +1,20 @@
+# paypal_example.routing.yml
 
-paypal_example.paypal_example:
-  path: '/paypal_example/form'
+paypal_example.paypal_settings_form:
+  path: '/admin/config/paypal_example/settings'
   defaults:
-    _form: '\Drupal\paypal_example\Form\PaypalExample'
-    _title: 'PaypalExample'
+    _form: '\Drupal\paypal_example\Form\PayPalPaymentsConfigForm'
+    _title: 'Your PayPal payments settings'
+  requirements:
+    _permission: 'administer paypal_payments'
+
+
+paypal_example.payment_example:
+  path: '/flair-core/paypal_payment'
+  defaults:
+    _controller: '\Drupal\paypal_example\Controller\PayPalController::pay'
+    _title: 'pay with Paypal'
   requirements:
     _permission: 'access content'
 
+# End of file.

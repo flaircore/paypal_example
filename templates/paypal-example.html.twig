@@ -1,0 +1,26 @@
+{# paypal-example.html.twig #}
+
+{% if data.client_id %}
+  <div class="content">
+    <div style="padding-bottom: 1em; font-weight: 600">
+      {{ data.title }}
+    </div>
+
+    <div id="paypal-example" class="paypal-example" style="padding-bottom: 1em;">
+      <label for="amount">Amount in {{ data.currency }} : </label>
+
+      <input type="number" id="amount" name="amount"
+             min="5" value="{{ data.amount }}">
+    </div>
+    <div id="paypal-button-container"></div>
+  </div>
+
+{% else  %}
+
+  <div>
+    <h2> Please configure your app with the relevant info provided by paypal.</h2>
+    <span> Message : {{ data.info }} .</span>
+  </div>
+{% endif  %}
+
+{# End of file #}

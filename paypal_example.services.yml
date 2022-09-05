@@ -1,7 +1,10 @@
-#paypal_example.services.yml
+# paypal_example.services.yml
 services:
-  paypal_example.paypal_listener:
-    class: Drupal\paypal_example\PaypalListener
+  paypal_example.paypal_client:
+    class: Drupal\paypal_example\PayPalClient
     arguments: []
-    tags:
-      - { name: event_subscriber }
+    calls:
+      - [setConfig, ['@config.factory']]
+      - [setEntity, ['@entity_type.manager'] ]
+
+# End of file.
